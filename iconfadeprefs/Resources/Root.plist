@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>IconFade 设置</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSwitchCell</string>
+            <key>default</key>
+            <true/>
+            <key>defaults</key>
+            <string>com.yourcompany.iconfade</string>
+            <key>key</key>
+            <string>enabled</string>
+            <key>label</key>
+            <string>启用插件</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>延迟时间（秒）</string>
+            <key>footerText</key>
+            <string>图标静止后多少秒开始渐变透明。范围：0.5 - 60 秒</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSliderCell</string>
+            <key>default</key>
+            <real>3.0</real>
+            <key>defaults</key>
+            <string>com.yourcompany.iconfade</string>
+            <key>key</key>
+            <string>delay</string>
+            <key>min</key>
+            <real>0.5</real>
+            <key>max</key>
+            <real>60.0</real>
+            <key>showValue</key>
+            <true/>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>label</key>
+            <string>目标透明度</string>
+            <key>footerText</key>
+            <string>图标最终透明度。0 = 完全透明，1 = 完全不透明。建议 0.1 - 0.3</string>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSSliderCell</string>
+            <key>default</key>
+            <real>0.2</real>
+            <key>defaults</key>
+            <string>com.yourcompany.iconfade</string>
+            <key>key</key>
+            <string>alpha</string>
+            <key>min</key>
+            <real>0.0</real>
+            <key>max</key>
+            <real>1.0</real>
+            <key>showValue</key>
+            <true/>
+        </dict>
+        <dict>
+            <key>cell</key>
+            <string>PSGroupCell</string>
+            <key>footerText</key>
+            <string>修改设置后无需注销，自动生效。建议透明度不要设太低，以免找不到图标。</string>
+        </dict>
+    </array>
+    <key>title</key>
+    <string>IconFade</string>
+</dict>
+</plist>

@@ -1,0 +1,9 @@
+Package: com.yourcompany.iconfade
+Name: IconFade
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Description: 桌面图标静止后渐变透明，支持自定义延迟时间和透明度
+Maintainer: Your Name
+Author: Your Name
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
