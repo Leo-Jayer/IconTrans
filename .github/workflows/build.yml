@@ -1,0 +1,32 @@
+name: Build IconFade
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Theos
+        uses: Randomblock1/theos-action@v1.2
+        with:
+          theos-src: 'https://github.com/theos/theos'
+
+      - name: Build Package
+        run: |
+          export THEOS=~/theos
+          export PATH=$THEOS/bin:$PATH
+          make package FINALPACKAGE=1
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IconFade-deb
+          path: packages/*.deb
